@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Жар — бургеры и гриль</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ===== Меню ===== -->
+    <section class="screen" id="screen-menu">
+      <header class="hero">
+        <div class="hero__logo">🔥</div>
+        <div>
+          <h1 class="hero__title" id="cafe-name">Жар</h1>
+          <p class="hero__sub" id="cafe-info">Бургеры и гриль</p>
+        </div>
+      </header>
+
+      <div class="promo" id="promo"></div>
+
+      <nav class="cats" id="cats" aria-label="Категории"></nav>
+
+      <main id="menu" class="menu">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </main>
+    </section>
+
+    <!-- ===== Оформление ===== -->
+    <section class="screen" id="screen-checkout" hidden>
+      <header class="topbar">
+        <button class="topbar__back" id="back-btn" aria-label="Назад">←</button>
+        <h2>Ваш заказ</h2>
+        <button class="link-btn" id="clear-btn">Очистить</button>
+      </header>
+
+      <ul class="cart" id="cart"></ul>
+
+      <form class="checkout" id="checkout-form" novalidate>
+        <div class="segmented" role="radiogroup" aria-label="Способ получения">
+          <label><input type="radio" name="type" value="delivery" checked><span>🛵 Доставка</span></label>
+          <label><input type="radio" name="type" value="pickup"><span>🏃 Самовывоз</span></label>
+        </div>
+
+        <label class="field" id="address-field">
+          <span>Адрес доставки</span>
+          <input name="address" placeholder="Улица, дом, квартира, подъезд" autocomplete="street-address">
+          <small class="field__error"></small>
+        </label>
+        <p class="pickup-note" id="pickup-note" hidden></p>
+
+        <label class="field">
+          <span>Телефон</span>
+          <input name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+          <small class="field__error"></small>
+        </label>
+
+        <div class="row">
+          <label class="field">
+            <span>Время</span>
+            <select name="time" id="time-select"></select>
+          </label>
+          <label class="field">
+            <span>Оплата</span>
+            <select name="payment">
+              <option value="card">Картой при получении</option>
+              <option value="cash">Наличными</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Комментарий</span>
+          <textarea name="comment" rows="2" maxlength="300" placeholder="Например: без лука, позвонить за 10 минут"></textarea>
+        </label>
+
+        <dl class="totals" id="totals"></dl>
+        <p class="form-msg" id="form-msg" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Кнопка внизу — используется, когда приложение открыто не в Telegram -->
+    <div class="bottom-bar" id="bottom-bar" hidden>
+      <button class="main-btn" id="main-btn"></button>
+    </div>
+  </div>
+
+  <!-- Демо-окно для браузера -->
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet__box">
+      <div class="sheet__icon">✅</div>
+      <h3>Заказ сформирован</h3>
+      <p>Это демо в браузере. В Telegram эти данные получит бот, пересчитает сумму и пришлёт подтверждение.</p>
+      <pre id="sheet-json"></pre>
+      <button class="main-btn" id="sheet-close">Понятно</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

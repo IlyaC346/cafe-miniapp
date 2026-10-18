@@ -1,0 +1,36 @@
+{
+  "cafe": {
+    "name": "Жар",
+    "tagline": "Бургеры и гриль",
+    "address": "ул. Примерная, 8",
+    "hours": "Ежедневно 11:00–23:00",
+    "delivery_fee": 199,
+    "free_delivery_from": 1500,
+    "min_order": 500
+  },
+  "categories": [
+    {"id": "burgers", "title": "Бургеры"},
+    {"id": "snacks", "title": "Закуски"},
+    {"id": "salads", "title": "Салаты"},
+    {"id": "drinks", "title": "Напитки"},
+    {"id": "desserts", "title": "Десерты"}
+  ],
+  "items": [
+    {"id": "classic", "category": "burgers", "name": "Классический", "desc": "Говядина, чеддер, томаты, лук, соус «Жар»", "price": 390, "weight": "280 г", "emoji": "🍔", "tags": ["хит"]},
+    {"id": "double", "category": "burgers", "name": "Двойной чиз", "desc": "Две котлеты, двойной чеддер, маринованные огурцы", "price": 520, "weight": "380 г", "emoji": "🍔", "tags": []},
+    {"id": "spicy", "category": "burgers", "name": "Огненный", "desc": "Говядина, халапеньо, острый соус, пепперджек", "price": 460, "weight": "300 г", "emoji": "🌶️", "tags": ["острое"]},
+    {"id": "chicken", "category": "burgers", "name": "Чикен", "desc": "Куриное филе в панировке, салат, соус тартар", "price": 370, "weight": "260 г", "emoji": "🐔", "tags": []},
+    {"id": "veggie", "category": "burgers", "name": "Вегги", "desc": "Котлета из нута, авокадо, томаты, руккола", "price": 410, "weight": "270 г", "emoji": "🥑", "tags": ["новинка"]},
+    {"id": "fries", "category": "snacks", "name": "Картофель фри", "desc": "Хрустящий, с морской солью", "price": 160, "weight": "150 г", "emoji": "🍟", "tags": []},
+    {"id": "wedges", "category": "snacks", "name": "Картофель по-деревенски", "desc": "С паприкой и чесноком", "price": 180, "weight": "170 г", "emoji": "🥔", "tags": []},
+    {"id": "nuggets", "category": "snacks", "name": "Наггетсы", "desc": "6 штук, соус на выбор у курьера", "price": 240, "weight": "150 г", "emoji": "🍗", "tags": ["хит"]},
+    {"id": "rings", "category": "snacks", "name": "Луковые кольца", "desc": "В пивном кляре", "price": 190, "weight": "120 г", "emoji": "🧅", "tags": []},
+    {"id": "caesar", "category": "salads", "name": "Цезарь с курицей", "desc": "Романо, курица гриль, пармезан, гренки", "price": 350, "weight": "220 г", "emoji": "🥗", "tags": []},
+    {"id": "coleslaw", "category": "salads", "name": "Коул слоу", "desc": "Капуста, морковь, лёгкая заправка", "price": 150, "weight": "150 г", "emoji": "🥬", "tags": []},
+    {"id": "lemonade", "category": "drinks", "name": "Лимонад «Цитрус»", "desc": "Домашний, лимон и апельсин", "price": 190, "weight": "400 мл", "emoji": "🍋", "tags": []},
+    {"id": "cola", "category": "drinks", "name": "Кола", "desc": "Классическая, охлаждённая", "price": 130, "weight": "330 мл", "emoji": "🥤", "tags": []},
+    {"id": "milkshake", "category": "drinks", "name": "Милкшейк", "desc": "Ваниль, шоколад или клубника", "price": 260, "weight": "350 мл", "emoji": "🥛", "tags": ["хит"]},
+    {"id": "cheesecake", "category": "desserts", "name": "Чизкейк", "desc": "Нью-Йорк, с ягодным соусом", "price": 270, "weight": "130 г", "emoji": "🍰", "tags": []},
+    {"id": "brownie", "category": "desserts", "name": "Брауни", "desc": "Тёплый, с шариком пломбира", "price": 240, "weight": "140 г", "emoji": "🍫", "tags": ["новинка"]}
+  ]
+}
